@@ -1,0 +1,96 @@
+.container-Nabvar {
+    background: #5307CF;
+    color: white;
+    font-weight: bold;
+    height: 75px;
+}
+
+.navbar {
+    padding-top: 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    line-height: 75px;
+    margin: auto;
+}
+
+ul {
+    margin: auto;
+}
+
+.nabvar-items {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nabvar-item {
+    margin-right: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-logo {
+    font-size: 30px;
+}
+
+.navbar-carrito {
+    margin-right: 10px;
+}
+
+.navbar-menu {
+    display: none;
+}
+
+.nabvar-item:hover {
+    color: #cdb3f7;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-Nabvar {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nabvar-items {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 75px;
+
+        background: #6e25e4;
+        width: 100%;
+        height: 300px;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .menu-open {
+        left: 0px;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .menu-close {
+        left: -100%;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .nabvar-item {
+        margin: 0;
+        align-self: center;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .navbar-menu {
+        display: inline;
+    }
+}
