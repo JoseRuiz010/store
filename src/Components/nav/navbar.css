@@ -24,6 +24,11 @@ ul {
     list-style: none;
 }
 
+.nabvar-item>a {
+    text-decoration: none;
+    color: white;
+}
+
 .nabvar-item {
     margin-right: 20px;
     text-decoration: none;
@@ -42,7 +47,7 @@ ul {
     display: none;
 }
 
-.nabvar-item:hover {
+.nabvar-item>a:hover {
     color: #cdb3f7;
 }
 
