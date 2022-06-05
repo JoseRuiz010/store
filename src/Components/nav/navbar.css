@@ -8,7 +8,7 @@
 
 .navbar {
     padding-top: 0;
-    width: 80%;
+    width: 75%;
     display: flex;
     justify-content: space-around;
     line-height: 75px;
@@ -32,7 +32,7 @@ ul {
 }
 
 .nabvar-item {
-    margin-right: 20px;
+    margin-right: 50px;
     text-decoration: none;
     cursor: pointer;
 }
@@ -41,12 +41,15 @@ ul {
     font-size: 30px;
 }
 
-.navbar-carrito {
-    margin-right: 10px;
+.navbar-item-carrito {
+    margin-right: 20px;
+    font-size: 15px;
 }
 
 .navbar-menu {
     display: none;
+    width: 15px;
+
 }
 
 .nabvar-item>a:hover {

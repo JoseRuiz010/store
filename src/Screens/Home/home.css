@@ -5,3 +5,15 @@
 .home-container {
     background: #f8f8f8;
 }
+
+.etiqueta {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 15px;
+
+}
+
+.containcerProducto {
+    width: 80%;
+    margin: auto;
+}

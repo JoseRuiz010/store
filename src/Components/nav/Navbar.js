@@ -1,6 +1,8 @@
 import React, { Component, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 export const Navbar = () => {
 
     const [isOpenMenu, setisOpenMenu] = useState(false)
@@ -13,7 +15,7 @@ export const Navbar = () => {
         <div className='container-Nabvar'>
             <nav className='navbar'>
                 <div className='nav-logo'>
-                    Logo
+                    <img style={{ width: '50px', borderRadius: 20 }} src='https://www.logolynx.com/images/logolynx/29/29764eeae62421a6f00f2ef720287972.jpeg' />
                 </div>
                 <ul className={isOpenMenu ? "menu-open nabvar-items" : "nabvar-items menu-close"}>
                     <li className='nabvar-item'><Link to="/Home">Home</Link></li>
@@ -22,8 +24,12 @@ export const Navbar = () => {
                     <li className='nabvar-item'><Link to="/Consultas">Consultas</Link></li>
                 </ul>
                 <div className='navbar-carrito'>
-                    <span className='navbar-carrito'>Carrito</span>
-                    <span className='navbar-menu' onClick={() => changeMenu()}> X </span>
+                    <span className='navbar-item-carrito'>
+                        <FontAwesomeIcon style={{ height: 18 }} icon={faCartShopping} />
+                    </span>
+                    <span className='navbar-menu' onClick={() => changeMenu()}>
+                        <FontAwesomeIcon icon={faBars} />
+                    </span>
                 </div>
 
             </nav>

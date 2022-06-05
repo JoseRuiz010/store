@@ -4,7 +4,8 @@ import './home.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContainerGrid from '../../Components/Container/ContainerGrid';
 import Card from '../../Components/Card/Card';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFire } from '@fortawesome/free-solid-svg-icons'
 const Carrusel = () => {
     return (
         <div className='container-carousel'>
@@ -42,19 +43,31 @@ export const Home = () => {
             <Carrusel />
             <br />
 
-            <p style={{ color: 'black', fontWeight: 'bold', marginLeft: 10 }}>Hot Deals</p>
+            <div className='containcerProducto'>
 
-            <ContainerGrid>
+                <p className='etiqueta'>
+                    <FontAwesomeIcon style={{ marginRight: '10px' }} color='orange' height={25} icon={faFire} />
+                    Hot Deals
+                </p>
 
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <ContainerGrid>
 
-            </ContainerGrid>
-        </div>
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+
+                </ContainerGrid>
+            </div>
+        </div >
     )
 
 }

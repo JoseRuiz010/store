@@ -9,6 +9,7 @@ export default function Card() {
             <div className='container-card-descripcion'>
                 <p className='container-card-titulo'>TIRA DE LED PARA AUTO</p>
                 <p className='container-card-precio'>$2.800</p>
+                <button className='button-agregar-carrito'>Agregar </button>
             </div>
         </div>
     )

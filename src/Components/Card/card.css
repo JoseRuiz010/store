@@ -1,4 +1,8 @@
 .container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: #ffffff;
     margin: 10px;
     padding: 5px;
@@ -15,6 +19,9 @@
 }
 
 .container-card-descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 5px;
     cursor: pointer;
 
@@ -26,12 +33,29 @@
 
 }
 
+.button-agregar-carrito {
+    width: 90%;
+    background: #715CC4;
+    border: none;
+    border-radius: 17px;
+    color: white;
+    padding: 3px;
+
+}
+
 .container-card-precio {}
 
 @media only screen and (max-width: 768px) {
     .container-card {
-        margin-top: 10px;
-
+        flex-direction: row;
     }
 
+    .container-card-imagen {
+        background-color: #715CC4;
+        width: 50%;
+    }
+
+    .container-card-imagen>img {
+        width: 100%;
+    }
 }
