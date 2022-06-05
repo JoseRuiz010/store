@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+}
+
+.grid-container--fit {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+}
+
+.grid-element {
+    background: red;
+    margin: 10px;
+    text-align: center;
+    height: 300px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .grid-container--fit {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+}

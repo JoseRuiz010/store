@@ -2,7 +2,8 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Navbar } from '../Components/nav/Navbar'
 import Consultas from '../Screens/Consultas/Consultas'
-import Home from '../Screens/Home/Home'
+import { Home } from '../Screens/Home/Home'
+
 import Liquidacion from '../Screens/Liquidacion/Liquidacion'
 
 function Navegacion() {

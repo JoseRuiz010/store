@@ -1,8 +1,9 @@
 .container-Nabvar {
-    background: #5307CF;
+    background: #715CC4;
     color: white;
     font-weight: bold;
     height: 75px;
+
 }
 
 .navbar {
@@ -22,6 +23,7 @@ ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    z-index: 100;
 }
 
 .nabvar-item>a {
@@ -71,7 +73,7 @@ ul {
         position: fixed;
         top: 75px;
 
-        background: #6e25e4;
+        background: #7965c7;
         width: 100%;
         height: 300px;
         transition: all ease-in-out 0.5s;

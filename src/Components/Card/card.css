@@ -1,0 +1,37 @@
+.container-card {
+    background: #ffffff;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0.1), 0px 8px 0px -100px rgba(0, 0, 0, 0.1);
+}
+
+.container-card:hover {
+    transform: scale(1.01);
+}
+
+.container-card-imagen>img {
+    width: 100%;
+}
+
+.container-card-descripcion {
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+.container-card-titulo {
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+.container-card-precio {}
+
+@media only screen and (max-width: 768px) {
+    .container-card {
+        margin-top: 10px;
+
+    }
+
+}
