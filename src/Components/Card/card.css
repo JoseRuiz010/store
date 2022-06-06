@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 450px;
     background: #ffffff;
     margin: 10px;
     padding: 5px;
@@ -14,8 +15,14 @@
     transform: scale(1.01);
 }
 
+.container-card-imagen {
+    height: 250px;
+}
+
 .container-card-imagen>img {
     width: 100%;
+    max-height: 250px;
+    object-fit: cover;
 }
 
 .container-card-descripcion {
@@ -48,14 +55,24 @@
 @media only screen and (max-width: 768px) {
     .container-card {
         flex-direction: row;
+        justify-content: space-around;
+        height: 250px;
     }
 
     .container-card-imagen {
-        background-color: #715CC4;
-        width: 50%;
+
+        width: 150px;
+        height: 150px;
     }
 
     .container-card-imagen>img {
         width: 100%;
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    .container-card-descripcion {
+
+        max-width: 50%;
     }
 }

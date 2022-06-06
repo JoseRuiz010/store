@@ -8,7 +8,7 @@ import Carrito from '../carrito/Carrito';
 export const Navbar = () => {
 
     const [isOpenMenu, setisOpenMenu] = useState(false)
-    const {changeCarrito} = useContext(GlobalContext)
+    const { changeCarrito } = useContext(GlobalContext)
 
     const changeMenu = () => {
         setisOpenMenu(!isOpenMenu);
@@ -23,11 +23,11 @@ export const Navbar = () => {
                 <ul className={isOpenMenu ? "menu-open nabvar-items" : "nabvar-items menu-close"}>
                     <li className='nabvar-item'><Link to="/Home">Home</Link></li>
                     <li className='nabvar-item'><Link to="/Liquidacion">Liquidacion</Link></li>
-                    <li className='nabvar-item'><Link to="/Novedades">Novedades</Link></li>
+                    <li className='nabvar-item'><Link to="/Perfil">Mi Perfil</Link></li>
                     <li className='nabvar-item'><Link to="/Consultas">Consultas</Link></li>
                 </ul>
                 <div className='navbar-carrito'>
-                    <span className='navbar-item-carrito' onClick={()=>changeCarrito()}>
+                    <span className='navbar-item-carrito' onClick={() => changeCarrito()}>
                         <FontAwesomeIcon style={{ height: 18 }} icon={faCartShopping} />
                     </span>
                     <span className='navbar-menu' onClick={() => changeMenu()}>
@@ -36,7 +36,7 @@ export const Navbar = () => {
                 </div>
 
             </nav>
-            <Carrito/>
+            <Carrito />
         </div>
     )
 

@@ -11,7 +11,7 @@ import { productos } from '../../services/datos';
 const Carrusel = () => {
     return (
         <div className='container-carousel'>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" accessKey=''>
+            <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src="https://s3-us-west-2.amazonaws.com/assets.ximaro.net/banners/pictures/000/000/075/original/banner-web-cyber-13.jpg?1617134479" class="d-block w-100" alt="..." />
@@ -33,7 +33,7 @@ const Carrusel = () => {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
-        </div>
+        </div >
     );
 }
 
@@ -44,7 +44,7 @@ export const Home = () => {
         <div className='home-container'>
             <Carrusel />
             <br />
-            
+
             <div className='containcerProducto'>
 
                 <p className='etiqueta'>
@@ -55,9 +55,9 @@ export const Home = () => {
                 <ContainerGrid>
 
                     {
-                        productos.map(p=>(
+                        productos.map(p => (
 
-                            <Card key={p.id} {...p}/>
+                            <Card key={p.id} producto={p} />
                         ))
                     }
 

@@ -1,0 +1,44 @@
+.container-perfil {
+    background: rgb(248, 238, 238);
+    width: 45%;
+    border-radius: 25px;
+    margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0.1), 0px 8px 0px -100px rgba(0, 0, 0, 0.1);
+}
+
+.container-imagen-user {
+    margin: 10px;
+}
+
+.container-imagen-user>img {
+    border-radius: 100%;
+    height: 170px;
+}
+
+.container-date {
+    text-align: center;
+    width: 80%;
+}
+
+.container-date-user {
+
+    width: 80%;
+}
+
+.item-data-user {
+    display: flex;
+    margin: 9px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .container-perfil {
+        width: 90%;
+    }
+}

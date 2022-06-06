@@ -5,6 +5,7 @@ import Consultas from '../Screens/Consultas/Consultas'
 import { Home } from '../Screens/Home/Home'
 
 import Liquidacion from '../Screens/Liquidacion/Liquidacion'
+import MyPerfil from '../Screens/MyPerfil/MyPerfil'
 
 function Navegacion() {
     return (
@@ -12,7 +13,7 @@ function Navegacion() {
             <Navbar />
             <Routes>
                 <Route path="/Home" element={<Home />} />
-                <Route path="/Novedades" element={<Consultas />} />
+                <Route path="/Perfil" element={<MyPerfil />} />
                 <Route path="/Consultas" element={<Consultas />} />
                 <Route path="/Liquidacion" element={<Liquidacion />} />
             </Routes>
