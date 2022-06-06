@@ -6,6 +6,7 @@ import ContainerGrid from '../../Components/Container/ContainerGrid';
 import Card from '../../Components/Card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons'
+import Carrito from '../../Components/carrito/Carrito';
 const Carrusel = () => {
     return (
         <div className='container-carousel'>
@@ -42,7 +43,7 @@ export const Home = () => {
         <div className='home-container'>
             <Carrusel />
             <br />
-
+            
             <div className='containcerProducto'>
 
                 <p className='etiqueta'>

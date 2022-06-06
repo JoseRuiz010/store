@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import Navegacion from './Routes/Navegacion';
+import GlobalStateProvider from './context/GlobalState';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Navegacion />
-  </BrowserRouter>
+  <GlobalStateProvider>
+    <BrowserRouter>
+      <Navegacion />
+    </BrowserRouter>
+  </GlobalStateProvider>
 
 );

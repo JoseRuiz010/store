@@ -24,3 +24,19 @@ export const preguntasRespuestas = [
         respuesta: "Los cambios directos se realizan dentro de las 48hs de realizada la compra para auriculares y cables; 3 meses para accesorios; y 12 meses para celulares y tablets, siempre y cuando se cumpla con los requisitos de la garantía. Los cambios por arrepentimiento de compra por parte del cliente, se realizan únicamente en el local y por equivalente del monto adquirido inicialmente. Ocasionalmente podrá adquirir otro artículo de mayor valor abonando la diferencia correspondiente."
     },
 ]
+
+export const categorias= [
+    {
+        id:"",
+        name:""
+    }
+]
+
+export const productos= [
+    {
+        name:"",
+        imgUrl:"",
+        price:"",
+        category:""
+    }
+]
