@@ -7,6 +7,7 @@ import Card from '../../Components/Card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons'
 import Carrito from '../../Components/carrito/Carrito';
+import { productos } from '../../services/datos';
 const Carrusel = () => {
     return (
         <div className='container-carousel'>
@@ -53,18 +54,12 @@ export const Home = () => {
 
                 <ContainerGrid>
 
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                    {
+                        productos.map(p=>(
+
+                            <Card key={p.id} {...p}/>
+                        ))
+                    }
 
                 </ContainerGrid>
             </div>

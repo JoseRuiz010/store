@@ -17,3 +17,11 @@
     width: 80%;
     margin: auto;
 }
+
+@media only screen and (max-width: 768px) {
+    .containcerProducto {
+        
+         width: 95%;
+    }
+
+}
