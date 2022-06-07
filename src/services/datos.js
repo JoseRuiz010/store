@@ -32,7 +32,7 @@ export const preguntasRespuestas = [
 export const categorias = [
     {
         id: generarId(),
-        name: ""
+        name: "Todas"
     },
     {
         id: generarId(),

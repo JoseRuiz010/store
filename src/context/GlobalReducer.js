@@ -14,6 +14,11 @@ const GlobalReducer = (state, action) => {
                 ...state,
                 isOpenCarrito: !state.isOpenCarrito
             }
+        case TipoReducer.changeCategoria:
+            return {
+                ...state,
+                isOpenCategoria: !state.isOpenCategoria
+            }
 
         case TipoReducer.agregarAlCarrito:
             return {
@@ -54,5 +59,6 @@ export const TipoReducer = {
     quitarDelCarrito: "quitarDelCarrito",
     mostrarCarrito: "mostrarCarrito",
     ocultarCarrito: "ocultarCarrito",
-    changeCarrito: "changeCarrito"
+    changeCarrito: "changeCarrito",
+    changeCategoria: "changeCategoria"
 }

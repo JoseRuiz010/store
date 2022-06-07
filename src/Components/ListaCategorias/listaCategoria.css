@@ -1,0 +1,34 @@
+.containcerCategoria {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 75px;
+    background-color: #FFFF;
+    z-index: 100;
+}
+
+.container-items-categoria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 25px;
+    width: 75%;
+    margin: auto;
+}
+
+.item-categoria {
+    color: black;
+}
+
+.item-categoria:hover {
+    text-decoration: underline;
+}
+
+.ocultarCategoria {
+    display: none;
+}
+
+.mostrarCategoria {
+
+    display: grid;
+
+}

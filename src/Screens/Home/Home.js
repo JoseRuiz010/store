@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component, useEffect, useState } from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import './home.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -7,11 +7,13 @@ import Card from '../../Components/Card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons'
 import Carrito from '../../Components/carrito/Carrito';
-import { productos } from '../../services/datos';
+
+import { allProducts, ofertaProducto } from '../../services/servicesProductos';
+import Loading from '../../Components/Loading/Loading';
 const Carrusel = () => {
     return (
         <div className='container-carousel'>
-            <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" >
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src="https://s3-us-west-2.amazonaws.com/assets.ximaro.net/banners/pictures/000/000/075/original/banner-web-cyber-13.jpg?1617134479" class="d-block w-100" alt="..." />
@@ -39,7 +41,13 @@ const Carrusel = () => {
 
 
 export const Home = () => {
+    const [productos, setproductos] = useState()
+    useEffect(() => {
 
+        setproductos(ofertaProducto());
+
+    }, [])
+    if (!productos) return <Loading />
     return (
         <div className='home-container'>
             <Carrusel />

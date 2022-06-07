@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Loading from '../../Components/Loading/Loading';
 import './myPerfil.css'
 const MyPerfil = () => {
     const [user, setuser] = useState();
@@ -6,21 +7,12 @@ const MyPerfil = () => {
         console.log('user');
         const user = fetch('https://randomuser.me/api/')
             .then(res => res.json())
-            .then(data => setuser(data.results[0]))
+        .then(data => setuser(data.results[0]))
 
     }, [])
 
     if (!user) return (
-        <div style={{ width: '550px', margin: 'auto', textAlign: 'center', marginTop: '30%' }}>
-            <div class="spinner-grow spinner-grow-sm" role="status" style={{ marginRight: 5 }}>
-                <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="spinner-grow spinner-grow-sm" role="status" style={{ marginRight: 5 }}>
-                <span class="visually-hidden">Loading...</span>
-            </div><div class="spinner-grow spinner-grow-sm" role="status" style={{ marginRight: 5 }}>
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
+        <Loading />
     )
     const { gender, name: { first, last }, location: { city, state, country }, email, phone, picture: { large, medium, thumbnail } } = user;
 

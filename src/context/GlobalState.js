@@ -4,6 +4,7 @@ import GlobalReducer, { TipoReducer } from "./GlobalReducer";
 
 const initialState = {
     isOpenCarrito: false,
+    isOpenCategoria: false,
     productos: [],
     user: null,
     error: null,
@@ -18,9 +19,15 @@ const GlobalStateProvider = ({ children }) => {
     const [stateGlobal, dispatch] = useReducer(GlobalReducer, initialState);
 
     const changeCarrito = () => {
-        console.log('Click');
+
         dispatch({
             type: TipoReducer.changeCarrito
+        })
+    }
+    const changeCategoria = () => {
+
+        dispatch({
+            type: TipoReducer.changeCategoria
         })
     }
 
@@ -44,9 +51,11 @@ const GlobalStateProvider = ({ children }) => {
         <GlobalContext.Provider value={{
             carrito: stateGlobal.carrito,
             isOpenCarrito: stateGlobal.isOpenCarrito,
+            isOpenCategoria: stateGlobal.isOpenCategoria,
             changeCarrito,
             agregarAlCarrito,
-            quitarAlCarrito
+            quitarAlCarrito,
+            changeCategoria
         }}>
             {children}
         </GlobalContext.Provider>
