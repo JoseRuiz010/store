@@ -10,7 +10,8 @@ const initialState = {
     error: null,
     carrito: {
         productos: [],
-        total: 0
+        total: 0,
+        cantidad: 0
     }
 }
 

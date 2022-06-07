@@ -29,7 +29,8 @@ const GlobalReducer = (state, action) => {
                         [...state.carrito.productos, { producto: action.payload, cantidad: 1 }]
                         : state.carrito.productos.map(c => c.producto === action.payload ? { ...c, cantidad: c.cantidad + 1 } : c),
 
-                    total: state.carrito.total + action.payload.price
+                    total: state.carrito.total + action.payload.price,
+                    cantidad: state.carrito.cantidad + 1
 
                 }
 
@@ -42,7 +43,8 @@ const GlobalReducer = (state, action) => {
                     productos: state.carrito.productos.find(c => c.producto === action.payload).cantidad === 1 ?
                         state.carrito.productos.filter(p => p.producto !== action.payload)
                         : state.carrito.productos.map(c => c.producto === action.payload ? { ...c, cantidad: c.cantidad - 1 } : c),
-                    total: state.carrito.total - action.payload.price
+                    total: state.carrito.total - action.payload.price,
+                    cantidad: state.carrito.cantidad - 1
                 }
             }
         default: return state;

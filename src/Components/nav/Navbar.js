@@ -10,7 +10,7 @@ export const Navbar = () => {
 
     const [isOpenMenu, setisOpenMenu] = useState(false)
 
-    const { changeCarrito, changeCategoria } = useContext(GlobalContext)
+    const { changeCarrito, changeCategoria, carrito } = useContext(GlobalContext)
     const navigate = useNavigate()
     const changeMenu = () => {
         setisOpenMenu(!isOpenMenu);
@@ -31,7 +31,7 @@ export const Navbar = () => {
                 </ul>
                 <div className='navbar-carrito'>
                     <span className='navbar-item-carrito' onClick={() => changeCarrito()}>
-                        <FontAwesomeIcon style={{ height: 18 }} icon={faCartShopping} />
+                        <span style={{ background: '#DC3545', borderRadius: '100%', padding: '2px', textAlign: 'center' }}>{carrito.cantidad}</span><FontAwesomeIcon style={{ height: 18 }} icon={faCartShopping} />
                     </span>
                     <span className='navbar-menu' onClick={() => changeMenu()}>
                         <FontAwesomeIcon icon={faBars} />

@@ -1,0 +1,7 @@
+.btn {
+    border: 2px #715CC4 solid;
+}
+
+.btn:hover {
+    background: 2px #715CC4 solid
+}
